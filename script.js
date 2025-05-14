@@ -21,7 +21,8 @@ this.make=make;
 SportsCar.prototype.getTopSpeed(){
 	return (`${this.topSeed}`);
 }
-
+SportsCar.prototype = Object.create(Car.prototype);
+SportsCar.prototype.constructor = SportsCar;
 // Do not change the code below
 window.Car = Car;
 window.SportsCar = SportsCar;
